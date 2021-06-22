@@ -19,7 +19,7 @@ public class StaticUIPlugin extends AbstractBasicPlugin {
 			}
 			System.out.println("working");
 		});
-		
+		    
 	}
 
 	@Override
