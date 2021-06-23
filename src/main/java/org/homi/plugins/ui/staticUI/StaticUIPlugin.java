@@ -18,39 +18,40 @@ public class StaticUIPlugin extends AbstractBasicPlugin {
 
 	@Override
 	public void setup() {
-		ROOT_URI = "";
-		System.out.println(this.getClass().getResource("/org/homi/plugins/ui/staticUI/"));
-		try {
-			ROOT_URI = this.getClass().getResource("/org/homi/plugins/ui/staticUI/").toURI().toString();
-		} catch (URISyntaxException e1) {
-			e1.printStackTrace();
-		}
-		
-		System.out.println(ROOT_URI);
-		// Create a component
-		Component component = new Component();
-		component.getServers().add(Protocol.HTTP, 8182);
-		component.getClients().add(Protocol.JAR);
-
-		// Create an application
-		Application application = new Application() {
-		    @Override
-		    public Restlet createInboundRoot() {
-		    	Directory d =  new Directory(getContext(), ROOT_URI);
-		    	System.out.println(d.getDescription());
-		    	System.out.println(d.getName());
-		    	System.out.println(d.getIndexName());
-		    	return d;
-		    }
-		};
-
-		// Attach the application to the component and start it
-		component.getDefaultHost().attach(application);
+//		ROOT_URI = "";
+//		System.out.println(this.getClass().getResource("/org/homi/plugins/ui/staticUI/"));
+//		try {
+//			ROOT_URI = this.getClass().getResource("/org/homi/plugins/ui/staticUI/").toURI().toString();
+//		} catch (URISyntaxException e1) {
+//			e1.printStackTrace();
+//		}
+//		
+//		System.out.println(ROOT_URI);
+//		// Create a component
+//		Component component = new Component();
+//		component.getServers().add(Protocol.HTTP, 8182);
+//		component.getClients().add(Protocol.JAR);
+//
+//		// Create an application
+//		Application application = new Application() {
+//		    @Override
+//		    public Restlet createInboundRoot() {
+//		    	Directory d =  new Directory(getContext(), ROOT_URI);
+//		    	System.out.println(d.getDescription());
+//		    	System.out.println(d.getName());
+//		    	System.out.println(d.getIndexName());
+//		    	return d;
+//		    }
+//		};
+//
+//		// Attach the application to the component and start it
+//		component.getDefaultHost().attach(application);
 		
 		
 		this.addWorker(()->{
 			try {
-				component.start();
+				UIServer ui = new UIServer();
+				ui.startup();
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
