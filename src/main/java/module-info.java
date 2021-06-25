@@ -9,6 +9,7 @@ module org.homi.plugins.ui.staticUI {
 	requires org.homi.plugins.actionRegistry.specification;
 	requires org.homi.plugin.specification;
 	requires deviceRegistrySpec;
+	requires nosqlspec;
 	exports org.homi.plugins.ui.staticUI;
 	
 	provides org.homi.plugin.api.basicplugin.IBasicPlugin

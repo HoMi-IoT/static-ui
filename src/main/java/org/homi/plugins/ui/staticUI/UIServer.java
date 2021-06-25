@@ -41,6 +41,7 @@ public class UIServer extends Application {
 		Router router = new Router(getContext());
 		
 		router.attach("/scripting", ScriptingResource.class);
+		router.attach("/scripting/{name}", ScriptingResource.class);
 		
 		router.attach("/data", DataResource.class);
 		router.attach("/data/{key}", DataResource.class);
