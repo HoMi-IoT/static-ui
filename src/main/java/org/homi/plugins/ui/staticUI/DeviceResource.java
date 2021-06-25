@@ -85,7 +85,7 @@ public class DeviceResource extends ServerResource{
 			ActionQuery aq = new ActionQuery();
 			aq.type(TYPE.SPECIFICATION).pluginID("DeviceRegistry").command("CREATEDEVICE");
 			try {
-				Action<Void> action = Action.getAction(aq);
+				Action<Boolean> action = Action.getAction(aq);
 				action.set("0", device);
 				
 				action.run();

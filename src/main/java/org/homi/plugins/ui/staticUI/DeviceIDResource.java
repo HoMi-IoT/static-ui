@@ -31,7 +31,7 @@ public class DeviceIDResource extends ServerResource{
 			ActionQuery aq = new ActionQuery();
 			aq.type(TYPE.SPECIFICATION).pluginID("DeviceRegistry").command("ADDTOGROUP");
 			try {
-				Action<Void> action = Action.getAction(aq);
+				Action<Boolean> action = Action.getAction(aq);
 				action.set("0", deviceID);
 				action.set("1", groupID);
 				action.run();
@@ -63,7 +63,7 @@ public class DeviceIDResource extends ServerResource{
 			ActionQuery aq = new ActionQuery();
 			aq.type(TYPE.SPECIFICATION).pluginID("DeviceRegistry").command("SETATTRIBUTE");
 			try {
-				Action<Void> action = Action.getAction(aq);
+				Action<Boolean> action = Action.getAction(aq);
 				action.set("0", deviceID);
 				action.set("1", attrName);
 				action.set("2", attrValue);
@@ -90,7 +90,7 @@ public class DeviceIDResource extends ServerResource{
 		ActionQuery aq = new ActionQuery();
 		aq.type(TYPE.SPECIFICATION).pluginID("DeviceRegistry").command("DELETEDEVICE");
 		try {
-			Action<Void> action = Action.getAction(aq);
+			Action<Boolean> action = Action.getAction(aq);
 			action.set("0", deviceID);
 		
 			action.run();

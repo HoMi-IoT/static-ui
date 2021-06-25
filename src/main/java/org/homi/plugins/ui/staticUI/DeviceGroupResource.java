@@ -61,7 +61,7 @@ public class DeviceGroupResource extends ServerResource{
 		ActionQuery aq = new ActionQuery();
 		aq.type(TYPE.SPECIFICATION).pluginID("DeviceRegistry").command("DELETEGROUP");
 		try {
-			Action<Void> action = Action.getAction(aq);
+			Action<Boolean> action = Action.getAction(aq);
 			action.set("0", groupID);
 		
 			action.run();
