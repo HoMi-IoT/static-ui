@@ -4,6 +4,7 @@ import java.net.URISyntaxException;
 
 import org.homi.plugin.api.PluginID;
 import org.homi.plugin.api.basicplugin.AbstractBasicPlugin;
+import org.homi.plugins.ar.specification.actions.Action;
 import org.restlet.Application;
 import org.restlet.Component;
 import org.restlet.Restlet;
@@ -18,6 +19,8 @@ public class StaticUIPlugin extends AbstractBasicPlugin {
 
 	@Override
 	public void setup() {
+		Action.setPluginProvider(getPluginProvider());
+		
 //		ROOT_URI = "";
 //		System.out.println(this.getClass().getResource("/org/homi/plugins/ui/staticUI/"));
 //		try {

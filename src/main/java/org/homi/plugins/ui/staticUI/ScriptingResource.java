@@ -10,17 +10,20 @@ import java.io.IOException;
 
 import org.json.*;
 import org.restlet.ext.json.*;
+import org.homi.plugins.ar.specification.*;
+import org.homi.plugins.ar.specification.actions.ActionQuery;
 public class ScriptingResource extends ServerResource{
 	@Post
 	public Representation post_action(Representation rep) throws IOException{
 		try {
-			System.out.println(rep.getText());
+			String s = rep.getText();
+			//ActionQuery aq = new ActionQuery().
 			
 		}
 		catch(Exception e) {
 			e.printStackTrace();
 		}
-		return new StringRepresentation(rep.getText());
+		return new StringRepresentation("Script evaluated");
 		
 	}
 	
