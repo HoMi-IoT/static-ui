@@ -63,7 +63,7 @@ public class ScriptingResource extends ServerResource{
 			ActionQuery aq = new ActionQuery();
 			aq.type(TYPE.SPECIFICATION).pluginID("ScriptingEngine").command("EVAL_SCRIPT");
 			Action<Object> action = Action.getAction(aq);
-			action.run();
+			action.run(s);
 			
 		}
 		catch(Exception e) {
