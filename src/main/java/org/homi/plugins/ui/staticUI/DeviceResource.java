@@ -75,7 +75,8 @@ public class DeviceResource extends ServerResource{
 			String jsonGroups = ((JSONArray)json.get("groups")).toString();
 			Map<String, String> addresses = om.readValue(jsonAddrs, Map.class);
 			Map<String, Serializable> attributes= om.readValue(jsonAttrs, Map.class);
-			Set<String> groups = (Set<String>) Arrays.asList(om.readValue(jsonGroups, String[].class));
+			//Set<String> groups = (Set<String>) Arrays.asList(om.readValue(jsonGroups, String[].class));
+			Set<String> groups = Set.of(om.readValue(jsonGroups, String[].class));
 			
 			Device device = new Device(deviceName);
 			device.setAddresses(addresses);
