@@ -44,11 +44,11 @@ public class DeviceResource extends ServerResource{
 				JSONObject jAddrs = new JSONObject(d.getAddresses());
 				JSONObject jAttrs = new JSONObject(d.getAttributes());
 				JSONObject jDevice = new JSONObject();
-				jDevice.append("name", name)
-				.append("addresses", jAddrs)
-				.append("attributes", jAttrs)
-				.append("groups", jGroups);
 				
+				jDevice.put("name", name)
+				.put("addresses", jAddrs)
+				.put("attributes", jAttrs)
+				.put("groups", jGroups);
 				jsonArray.put(jDevice);
 				
 			}
