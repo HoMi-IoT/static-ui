@@ -62,14 +62,15 @@ public class ScriptingResource extends ServerResource{
 			String s = rep.getText();
 			ActionQuery aq = new ActionQuery();
 			aq.type(TYPE.SPECIFICATION).pluginID("ScriptingEngine").command("EVAL_SCRIPT");
-			Action<Object> action = Action.getAction(aq);
-			action.run(s);
-			
+			Action<String> action = Action.getAction(aq);
+			String res = action.run(s);
+			return new StringRepresentation(res);
 		}
 		catch(Exception e) {
 			e.printStackTrace();
+			return new StringRepresentation("Error: unable to evaluate script\n");
 		}
-		return new StringRepresentation("Script evaluated");
+		//return new StringRepresentation("Script evaluated");
 		
 	}
 	
