@@ -54,6 +54,9 @@ public class UIServer extends Application {
 		router.attach("/bluetooth", BluetoothResource.class);
 		router.attach("/bluetooth/{state}", BluetoothResource.class);
 		
+		router.attach("/rules", RuleResource.class);
+		router.attach("rules/{id}", RuleResource.class);
+		
 		router.attach("/", directory);
 		
 		return router;
