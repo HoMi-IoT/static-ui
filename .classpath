@@ -36,57 +36,62 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/omri/HoMi/Specification/target/specification-0.0.1-SNAPSHOT.jar">
+	<classpathentry kind="lib" path="/home/nicolas/cmpe295/Specification/target/specification-0.0.1-SNAPSHOT.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/omri/HoMi/API/target/api-0.0.1-SNAPSHOT.jar">
+	<classpathentry kind="lib" path="/home/nicolas/cmpe295/PluginAPI/target/api-0.0.1-SNAPSHOT.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/omri/HoMi/ActionRegistrySpec/target/ARSpec-0.0.1-SNAPSHOT.jar">
+	<classpathentry kind="lib" path="/home/nicolas/git/ActionRegistrySpec/target/ARSpec-0.0.1-SNAPSHOT.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/omri/restlet-jse-2.4.3/lib/org.restlet.jar">
+	<classpathentry kind="lib" path="/home/nicolas/git/deviceRegistrySpec/target/deviceRegistrySpec-0.0.1-SNAPSHOT.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/omri/restlet-jse-2.4.3/lib/org.json_2.0/org.json.jar">
+	<classpathentry kind="lib" path="/home/nicolas/Downloads/restlet-jse-2.4.3/lib/com.fasterxml.jackson_2.9/com.fasterxml.jackson.core.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/omri/restlet-jse-2.4.3/lib/org.restlet.ext.jackson.jar">
+	<classpathentry kind="lib" path="/home/nicolas/cmpe295/nosql-spec/target/nosqlspec-0.0.1-SNAPSHOT.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/omri/restlet-jse-2.4.3/lib/org.restlet.ext.json.jar">
+	<classpathentry kind="lib" path="/home/nicolas/Downloads/restlet-jse-2.4.3/lib/com.fasterxml.jackson_2.9/com.fasterxml.jackson.databind.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/omri/HoMi/deviceRegistrySpec/target/deviceRegistrySpec-0.0.1-SNAPSHOT.jar">
+	<classpathentry kind="lib" path="/home/nicolas/Downloads/restlet-jse-2.4.3/lib/com.fasterxml.jackson_2.9/com.fasterxml.jackson.smile.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/omri/restlet-jse-2.4.3/lib/com.fasterxml.jackson_2.9/com.fasterxml.jackson.core.jar">
+	<classpathentry kind="lib" path="/home/nicolas/Downloads/restlet-jse-2.4.3/lib/org.json_2.0/org.json.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/omri/restlet-jse-2.4.3/lib/com.fasterxml.jackson_2.9/com.fasterxml.jackson.databind.jar">
+	<classpathentry kind="lib" path="/home/nicolas/Downloads/restlet-jse-2.4.3/lib/org.restlet.ext.jackson.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/omri/HoMi/nosql-spec/target/nosqlspec-0.0.1-SNAPSHOT.jar">
+	<classpathentry kind="lib" path="/home/nicolas/Downloads/restlet-jse-2.4.3/lib/org.restlet.ext.json.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/nicolas/Downloads/restlet-jse-2.4.3/lib/org.restlet.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>

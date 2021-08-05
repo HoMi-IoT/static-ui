@@ -1,6 +1,8 @@
 package org.homi.plugins.ui.staticUI;
 
 import java.io.IOException;
+import java.security.KeyStore.Entry;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -35,12 +37,16 @@ public class RuleResource extends ServerResource{
 		try {
 			action = Action.getAction(aq);
 			rules = action.run();
+			System.out.println("___________________SHOULD PRINT RULES MAP HERE VVVVVVVVVVVVVVVVV");
+			System.out.println(Arrays.toString(rules.entrySet().toArray()));
+			System.out.println("___________________SHOULD PRINT RULES MAP HERE ^^^^^^^^^^^^^^^^^");
 		} catch (InvalidArgumentException | ArgumentLengthException | PluginException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		return new JsonRepresentation(rules);
+		var jo = new JSONObject();
+		for(var e :rules.entrySet()) {jo.put(e.getKey().toString(), e.getValue()); };
+		return new JsonRepresentation(jo);
 	}
 	
 	@Post
